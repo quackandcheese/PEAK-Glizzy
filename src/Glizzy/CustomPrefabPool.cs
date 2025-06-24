@@ -8,6 +8,8 @@ using Glizzy.Extensions;
 
 namespace Glizzy
 {
+    // Yoinked from https://github.com/ZehsTeam/REPOLib/blob/main/REPOLib/Objects/CustomPrefabPool.cs
+    // The NotNullWhen attribute was bugging out so I just removed it.
     internal class CustomPrefabPool : IPunPrefabPool
     {
         public readonly Dictionary<string, GameObject> Prefabs = [];

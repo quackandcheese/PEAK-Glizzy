@@ -13,7 +13,7 @@
 
 	<ItemGroup>
 		<Reference Include="MMHOOK_Assembly-CSharp">
-			<HintPath>C:/Users/Quack/AppData/Roaming/com.kesomannen.gale/peak/profiles/Default/BepInEx/plugins/MMHOOK/Managed/MMHOOK_Assembly-CSharp.dll</HintPath>
+			<HintPath>$(PeakPluginsDir)/MMHOOK/Managed/MMHOOK_Assembly-CSharp.dll</HintPath>
 		</Reference>
 	</ItemGroup>
   <!--

@@ -7,6 +7,7 @@ using UnityEngine;
 
 namespace Glizzy.Modules
 {
+    // Yoinked from https://github.com/ZehsTeam/REPOLib/blob/main/REPOLib/Modules/NetworkPrefabs.cs
     public static class NetworkPrefabs
     {
         internal static CustomPrefabPool CustomPrefabPool

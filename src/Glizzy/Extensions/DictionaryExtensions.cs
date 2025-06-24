@@ -4,6 +4,8 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace Glizzy.Extensions
 {
+    // Yoinked from https://github.com/ZehsTeam/REPOLib/blob/main/REPOLib/Extensions/DictionaryExtensions.cs
+    // The NotNullWhen attribute was bugging out so I just removed it.
     internal static class DictionaryExtensions
     {
         public static bool TryGetKey<TKey, TValue>(this Dictionary<TKey, TValue> dictionary, TValue value, out TKey? key)

@@ -15,7 +15,6 @@ using Zorro.Core.CLI;
 namespace Glizzy;
 
 [BepInAutoPlugin]
-[ConsoleClassCustomizer("Glizzy")]
 public partial class Plugin : BaseUnityPlugin
 {
     public static Plugin Instance { get; private set; } = null!;
