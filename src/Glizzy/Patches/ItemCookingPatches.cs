@@ -46,8 +46,8 @@ namespace Glizzy.Patches
         {
             SkinnedMeshRenderer[] skinnedMeshRenderers = __instance.GetComponentsInChildren<SkinnedMeshRenderer>();
             Renderer[] combinedRenderers = [];
-            combinedRenderers.AddRangeToArray(__instance.renderers);
-            combinedRenderers.AddRangeToArray(skinnedMeshRenderers);
+            combinedRenderers = combinedRenderers.AddRangeToArray(__instance.renderers);
+            combinedRenderers = combinedRenderers.AddRangeToArray(skinnedMeshRenderers);
             return combinedRenderers;
         }
     }
