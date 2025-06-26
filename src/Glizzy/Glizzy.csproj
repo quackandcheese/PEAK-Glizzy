@@ -8,15 +8,19 @@
     <!-- This is the display name of your mod. Example: BepInEx Template -->
     <AssemblyTitle>Glizzy</AssemblyTitle>
     <!-- This is the version number of your mod. -->
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
   </PropertyGroup>
 
+
 	<ItemGroup>
-		<Reference Include="MMHOOK_Assembly-CSharp">
-			<HintPath>$(PeakPluginsDir)/MMHOOK/Managed/MMHOOK_Assembly-CSharp.dll</HintPath>
-		</Reference>
+		<PackageReference Include="PEAKModding.PEAKLib.Core" Version="0.1.*" Private="False" />
 	</ItemGroup>
-  <!--
+
+	<ItemGroup>
+		<PackageReference Include="PEAKModding.PEAKLib.Items" Version="0.1.*" Private="False" />
+	</ItemGroup>
+
+	<!--
   How to include thunderstore mods as dependencies via nuget
 
   We have already added the windows10ce nuget feed to this project

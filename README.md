@@ -1,31 +1,21 @@
 # Glizzy
 
-Describe your project here!
+The first item mod to hit PEAK. Adds a glizzy (hotdog) item with jiggle physics, inspired by the Glizzy item in [LethalThings](https://thunderstore.io/c/lethal-company/p/Evaisa/LethalThings/v/0.7.0/) by [Evaisa](https://github.com/EvaisaDev).
 
-## Template Instructions
+FYI, this mod will quickly become outdated, but I will try to update it as the tools progress.
 
-You can remove this section after you've set up your project.
+## How to find?
 
-Next steps:
+You have two options to finding the glizzy.
 
-- Create a copy of the `Config.Build.user.props.template` file and name it `Config.Build.user.props`
-  - This will automate copying your plugin assembly to `BepInEx/plugins/`
-  - Configure the paths to point to your game path and your `BepInEx/plugins/`
-  - Game assembly references should work if the path to the game is valid
-- Search `TODO` in the whole project to see what you should configure or modify
+Option 1:
+- Find naturally during a run.
+- The glizzy has the same spawn chances as Airline Food (legendary)
 
-### Thunderstore Packaging
+Option 2:
+- Use a tool like [Console Unlocker](https://thunderstore.io/c/peak/p/Spoopylocal/Console_Unlocker/) and access the dev console by pressing F1
+- Type 'Item.Add com.github.quackandcheese.Glizzy:Glizzy' and press enter to spawn it in.
 
-This template comes with Thunderstore packaging built-in, using [TCLI](<https://github.com/thunderstore-io/thunderstore-cli>).
-
-You can build Thunderstore packages by running:
-
-```sh
-dotnet build -c Release -target:PackTS -v d
-```
-
-> [!NOTE]  
-> You can learn about different build options with `dotnet build --help`.  
-> `-c` is short for `--configuration` and `-v d` is `--verbosity detailed`.
-
-The built package will be found at `artifacts/thunderstore/`.
+## Credits
+- [REPOLib](https://github.com/ZehsTeam/REPOLib/tree/main) for a couple of methods I yoinked.
+- [Hamunii](https://github.com/hamunii) for the [PEAK modding template](https://github.com/PEAKModding/BepInExTemplate).
