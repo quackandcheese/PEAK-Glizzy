@@ -16,6 +16,9 @@ using Zorro.Core.CLI;
 namespace Glizzy;
 
 [BepInAutoPlugin]
+[BepInDependency("com.github.PEAKModding.PEAKLib.Core", BepInDependency.DependencyFlags.HardDependency)]
+[BepInDependency("com.github.PEAKModding.PEAKLib.Items", BepInDependency.DependencyFlags.HardDependency)]
+[BepInDependency("com.quackandcheese.SkinnedMeshRendererItemFix", BepInDependency.DependencyFlags.HardDependency)]
 public partial class Plugin : BaseUnityPlugin
 {
     public static Plugin Instance { get; private set; } = null!;
@@ -33,24 +36,10 @@ public partial class Plugin : BaseUnityPlugin
         string AssetBundlePath = Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), "glizzy");
         Bundle = AssetBundle.LoadFromFile(AssetBundlePath);
 
-        // Harmony patches are to fix issues with using a SkinnedMeshRenderer instead of a MeshRenderer for an item (it's p much hardcoded)
-        Patch();
-
         Item glizzy = Bundle.LoadAsset<GameObject>("Glizzy.prefab").GetComponent<Item>();
         new ItemContent(glizzy).Register(Definition);
 
         // Log our awake here so we can see it in LogOutput.log file
         Log.LogInfo($"Plugin {Name} is loaded!");
-    }
-
-    internal static void Patch()
-    {
-        Harmony ??= new Harmony(Plugin.Instance.Info.Metadata.GUID);
-
-        Log.LogDebug("Patching...");
-
-        Harmony.PatchAll();
-
-        Log.LogDebug("Finished patching!");
     }
 }

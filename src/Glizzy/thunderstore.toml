@@ -15,6 +15,7 @@ containsNsfwContent = false
 BepInEx-BepInExPack_PEAK = "5.4.2403"
 PEAKModding-PEAKLib_Core = "0.1.0"
 PEAKModding-PEAKLib_Items = "0.1.0"
+quackandcheese-SkinnedMeshRendererItemFix = "0.1.0"
 
 [build]
 icon = "../../icon.png"

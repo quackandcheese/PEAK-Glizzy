@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.2] - 2025-07-04
+
+### Changed
+
+- Moved fixes for SkinnedMeshRenderers into [it's own mod](https://thunderstore.io/c/peak/p/quackandcheese/SkinnedMeshRendererItemFix/) and added it as a dependency.
+
 ## [0.1.1] - 2025-06-25
 
 ### Changed
